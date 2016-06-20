@@ -9,3 +9,13 @@
 .row.small-spacing:last-child {
     margin-right: -5px;
 }
+
+.bg-white {
+	background-color: #FFF;
+}
+
+.dotted-line {
+	display: block;
+	min-height: 2px;
+	background: url(../../images/icons/dot.png) repeat-x;
+}

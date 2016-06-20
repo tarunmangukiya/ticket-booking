@@ -57,6 +57,28 @@ $(function () {
 		}
 	};
 
+	set_datepicker = function () {
+		if($(window).width() > mobileScreenSize) {
+			$(".datepicker").datepicker();
+
+			$("#dateFrom").datepicker({
+				minDate: new Date(),
+		    	numberOfMonths: 3,
+		    	onSelect: function(dateText) {
+				    $("#dateTo").datepicker('option', 'minDate', dateText);
+				}
+		    });
+
+		    $("#dateTo").datepicker({
+				minDate: new Date(),
+		    	numberOfMonths: 3
+		    });
+		}
+		else {
+			$(".datepicker, #dateFrom, #dateTo").attr('type', 'date');
+		}
+	};
+
 	set_iCheck = function () {
 		$('input').iCheck({
 			checkboxClass: 'icheckbox_square-theme',
@@ -85,5 +107,10 @@ $(function () {
 	if(typeof $.fn.multiselect !== 'undefined'){ 
 		set_multiselect();
 	}
+
+	if(typeof $.fn.datepicker !== 'undefined'){ 
+		set_datepicker();
+	}
+
 
 });

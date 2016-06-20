@@ -91,7 +91,7 @@
     width: 160px;
     height: 160px;
     color: #373f51;
-    padding: 35px 10px;
+    padding: 38px 10px;
     text-decoration: none;
 }
 .customer-services .service:hover {
@@ -101,5 +101,5 @@
 
 .customer-services .service .icon {
     display: block;
-    font-size: 45px;
+    font-size: 40px;
 }

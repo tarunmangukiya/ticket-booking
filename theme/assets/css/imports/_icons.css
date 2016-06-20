@@ -1,8 +1,16 @@
 .ti {
-	background-position: center right;
+	background-position: center right 8px;
 	background-repeat: no-repeat;
 }
 
 .ti-flight-up {
 	background-image: url(../../images/icons/flight-up.png);
+}
+
+.ti-flight-down {
+	background-image: url(../../images/icons/flight-down.png);
+}
+
+.ti-cal {
+	background-image: url(../../images/icons/cal.png);
 }

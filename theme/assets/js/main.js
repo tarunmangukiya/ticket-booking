@@ -36,7 +36,7 @@ $(function () {
 
 	set_select2 = function () {
 		if($(window).width() > mobileScreenSize) {
-			$('select').select2({
+			$('select:not(.no-select2)').select2({
 				minimumResultsForSearch: Infinity
 			});
 
@@ -44,6 +44,9 @@ $(function () {
 		        maximumSelectionLength: 1,
 		        multiple: true
 		    });
+
+		    $("#flightFrom").next().find('.select2-selection').addClass('ti').addClass('ti-flight-up');
+		    $("#flightTo").next().find('.select2-selection').addClass('ti').addClass('ti-flight-down');
 			// $('.coffee_book_id').select2({templateResult: selectDropdownTemplate, templateSelection: selectDropdownTemplate});
 			// $('.chapter_list').select2({templateResult: selectDropdownTemplate, templateSelection: selectDropdownTemplate});
 			
@@ -54,12 +57,20 @@ $(function () {
 		}
 	};
 
-
 	set_iCheck = function () {
 		$('input').iCheck({
 			checkboxClass: 'icheckbox_square-theme',
 			radioClass: 'iradio_square-theme',
 			cursor: false
+		});
+	};
+
+	set_multiselect = function () {
+		$('.multiselect').multiselect({
+			buttonContainer: '<div class="multiselect-div" />',
+			buttonClass: 'multiselect-button',
+			includeSelectAllOption: true,
+			selectAllText: 'All'
 		});
 	};
 
@@ -69,6 +80,10 @@ $(function () {
 
 	if(typeof $.fn.select2 !== 'undefined'){ 
 		set_select2();
+	}
+
+	if(typeof $.fn.multiselect !== 'undefined'){ 
+		set_multiselect();
 	}
 
 });

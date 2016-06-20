@@ -1,0 +1,105 @@
+
+.ticket-types-bg {
+    background: url(../../images/bgs/ticket-booking.png) no-repeat center top 40px, rgba(184,230,244,1);
+    background: url(../../images/bgs/ticket-booking.png) no-repeat center top 40px, -moz-linear-gradient(left, rgba(184,230,244,1) 0%, rgba(226,245,251,1) 100%);
+    background: url(../../images/bgs/ticket-booking.png) no-repeat center top 40px, -webkit-gradient(left top, right top, color-stop(0%, rgba(184,230,244,1)), color-stop(100%, rgba(226,245,251,1)));
+    background: url(../../images/bgs/ticket-booking.png) no-repeat center top 40px, -webkit-linear-gradient(left, rgba(184,230,244,1) 0%, rgba(226,245,251,1) 100%);
+    background: url(../../images/bgs/ticket-booking.png) no-repeat center top 40px, -o-linear-gradient(left, rgba(184,230,244,1) 0%, rgba(226,245,251,1) 100%);
+    background: url(../../images/bgs/ticket-booking.png) no-repeat center top 40px, -ms-linear-gradient(left, rgba(184,230,244,1) 0%, rgba(226,245,251,1) 100%);
+    background: url(../../images/bgs/ticket-booking.png) no-repeat center top 40px, linear-gradient(to right, rgba(184,230,244,1) 0%, rgba(226,245,251,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e6f4', endColorstr='#e2f5fb', GradientType=1 );
+}
+
+.ticket-tabs {
+    margin: 90px 0;
+}
+.ticket-tabs .nav-tabs {
+    border: 0;
+}
+.ticket-tabs .nav-tabs>li>a {
+    background-color: #373f52cb;
+    color: #FFF;
+    border-radius: 0;
+    border: 0;
+    font-size: 20px;
+    margin: 0;
+    padding: 15px 25px;
+}
+.ticket-tabs .nav-tabs>li>a>.fa {
+    margin-right: 5px;
+}
+.ticket-tabs .nav-tabs>li.active>a, .ticket-tabs .nav-tabs>li.active>a:focus, .ticket-tabs .nav-tabs>li.active>a:hover {
+    border: 0;
+    background-color: #26aebd;
+    color: #FFF;
+}
+
+.ticket-tabs .tab-content h3 {
+    background-color: #26aebd;
+    margin: 0;
+    text-align: center;
+    padding: 15px;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.ticket-tabs .tab-pane {
+    background-color: #FFF;
+}
+
+.ticket-tabs .tab-form {
+    padding: 20px 30px;
+}
+
+.ticket-tabs .book-from {
+    padding-right: 30px;
+}
+.ticket-tabs .book-switch {
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+}
+.ticket-tabs .book-to {
+    padding-left: 30px;
+}
+
+.ticket-tabs .btn-exchange {
+    background-color: #373f51;
+    height: 30px;
+    width: 30px;
+    display: block;
+    border-radius: 50%;
+    padding: 5px 8px;
+    color: #FFF;
+    margin-top: 30px;
+}
+
+.customer-services {
+    background: url(../../images/bgs/customer-services.png) no-repeat right 6px top 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.customer-services h2 {
+    color: #26aebd;
+    margin-top: 85px;
+    margin-bottom: 20px;
+}
+
+.customer-services .service {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    color: #373f51;
+    padding: 35px 10px;
+    text-decoration: none;
+}
+.customer-services .service:hover {
+    background-color: #26aebd;
+    color: #FFF;
+}
+
+.customer-services .service .icon {
+    display: block;
+    font-size: 45px;
+}

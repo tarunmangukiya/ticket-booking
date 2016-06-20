@@ -1,0 +1,8 @@
+.ti {
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+
+.ti-flight-up {
+	background-image: url(../../images/icons/flight-up.png);
+}

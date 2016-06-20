@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index,follow"/>
+	<meta name="revisit-after" content="7 days">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/builds/style.css" />
+</head>
+
+<body class="home-page">
+
+<header id="header" class="container-fluid">
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img class="img-responsive" src="assets/images/logo.png" width="300" alt="" />
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plane"></i> Service <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
+								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
+								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
+								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> Contact Us</a></li>
+						<li class="active"><a href="#"><i class="fa fa-lock"></i> Login/Signup </a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+
+				<div class="nav-top">
+					<ul class="list-unstyled list-inline">
+						<li><a href="#"><i class="fa fa-print"></i> Print E-Ticket</a></li>
+						<li><a href="mailto:support@ashwinradadiya.com"><i class="fa fa-envelope"></i> support@ashwinradadiya.com</a></li>
+						<li><a href="tel"><i class="fa fa-phone"></i> +91 88-88-888-888</a></li>
+					</ul>
+				</div>
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+</header>
+
+<div class="container-fluid ticket-types-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-push-2 ticket-tabs">
+				<ul class="nav nav-tabs nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#flights"><i class="fa fa-plane"></i> Flights</a></li>
+					<li role="presentation"><a href="#hotels"><i class="fa fa-hotel"></i> Hotels</a></li>
+					<li role="presentation"><a href="#holidays"><i class="fa fa-globe"></i> Holidays</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="flights">
+						<h3>Book Domestic &amp; International Flight Ticket</h3>
+						<form class="tab-form">
+							<div class="form-group">
+								<div class="row">
+									<div class="iCheck col-md-3 col-md-push-2">
+										<input type="radio" name="type" id="oneWay" />
+										<label for="oneWay">ONE WAY</label>
+									</div>
+									<div class="iCheck col-md-3 col-md-push-2">
+										<input type="radio" name="type" id="roundTrip" />
+										<label for="roundTrip">ROUND TRIP</label>
+									</div>
+									<div class="iCheck col-md-3 col-md-push-2">
+										<input type="radio" name="type" id="multiCity" />
+										<label for="multiCity">MULTI CITY</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-6 book-from">
+										<label for="flightFrom">From</label>
+										<select id="flightFrom" class="form-control ti ti-flight-up">
+											<optgroup label="Most Searched Cities">
+												<option>New Delhi</option>
+												<option>New Delhi</option>
+											</optgroup>
+											<optgroup label="Most Searched Cities">
+												<option>New Delhi</option>
+												<option>New Delhi</option>
+											</optgroup>
+										</select>
+									</div>
+									<div class="book-switch">
+										<a href="#" type="button" class="btn-exchange">
+											<i class="fa fa-exchange"></i>
+										</a>
+									</div>
+									<div class="col-md-6 book-to">
+										<label for="flightTo">To</label>
+										<select id="flightTo" class="form-control">
+											<optgroup label="Most Searched Cities">
+												<option>New Delhi</option>
+												<option>New Delhi</option>
+											</optgroup>
+											<optgroup label="Most Searched Cities">
+												<option>New Delhi</option>
+												<option>New Delhi</option>
+											</optgroup>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="row small-spacing">
+											<div class="col-xs-6">
+												<label for="exampleInputName2">Departure</label>
+												<input type="text" class="form-control" id="exampleInputName2" placeholder="From">
+											</div>
+											<div class="col-xs-6">
+												<label for="exampleInputName2">Return</label>
+												<input type="text" class="form-control" id="exampleInputName2" placeholder="From">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row small-spacing">
+											<div class="col-xs-4">
+												<label for="exampleInputName2">Adult <small>(12+ yrs)</small></label>
+												<select class="form-control">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</div>
+											<div class="col-xs-4">
+												<label for="exampleInputName2">Child <small>(2-12 yrs)</small></label>
+												<select class="form-control">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</div>
+											<div class="col-xs-4">
+												<label for="exampleInputName2">Infant <small>(0-23 month)</small></label>
+												<select class="form-control">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="row small-spacing">
+											<div class="col-xs-6">
+												<label for="exampleInputName2">Class</label>
+												<select class="form-control">
+													<option>Economy</option>
+													<option>Economy</option>
+													<option>Economy</option>
+												</select>
+											</div>
+											<div class="col-xs-6">
+												<label for="exampleInputName2">Airlines (Optional)</label>
+												<select class="form-control">
+													<option>All</option>
+													<option>All</option>
+													<option>All</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-footer text-center">
+								<button type="submit" class="btn btn-danger">Search</button>
+							</div>
+						</form>
+						<div class="clearfix"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="hotels">...</div>
+					<div role="tabpanel" class="tab-pane" id="holidays">...</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container customer-services">
+	<h2>Customer Service</h2>
+	<div class="row">
+		<div class="col-md-2 col-sm-4">
+			<a href="#" class="service">
+				<span class="icon"><i class="fa fa-plane"></i></span>
+				<span class="text">Check Flight Status</span>
+			</a>
+		</div>
+		<div class="col-md-2 col-sm-4">
+			<a href="#" class="service">
+				<span class="icon"><i class="fa fa-print"></i></span>
+				<span class="text">Print E-Ticket</span>
+			</a>
+		</div>
+		<div class="col-md-2 col-sm-4">
+			<a href="#" class="service">
+				<span class="icon"><i class="fa fa-plane"></i></span>
+				<span class="text">Ticket Cancellation</span>
+			</a>
+		</div>
+		<div class="col-md-2 col-sm-4">
+			<a href="#" class="service">
+				<span class="icon"><i class="fa fa-plane"></i></span>
+				<span class="text">Check Refund Status</span>
+			</a>
+		</div>
+		<div class="col-md-2 col-sm-4">
+			<a href="#" class="service">
+				<span class="icon"><i class="fa fa-plane"></i></span>
+				<span class="text">Problem/Complaints</span>
+			</a>
+		</div>
+		<div class="col-md-2 col-sm-4">
+			<a href="#" class="service">
+				<span class="icon"><i class="fa fa-plane"></i></span>
+				<span class="text">FAQs</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-3 col-sm-6">
+				<h3>Quick Links</h3>
+				<ul class="list-unstyled">
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+					<li><a href="#">Cancellation Rules</a></li>
+					<li><a href="#">Baggage-Allowance</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+			<div class="col-md-2 col-sm-6">
+				<h3>Follow us on</h3>
+				<ul class="list-unstyled">
+					<li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+					<li><a href="#"><i class="fa fa-youtube"></i> Youtube</a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<h3>Contact us on</h3>
+				<ul class="list-unstyled">
+					<li><a href="mailto:support@ashwinradadiya.com"><i class="fa fa-envelope"></i> support@ashwinradadiya.com</a></li>
+					<li><a href="tel"><i class="fa fa-phone"></i> +91 88-88-888-888</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<h3>Quick Links for Agents</h3>
+				<ul class="list-unstyled">
+					<li><a href="#">Login</a></li>
+					<li><a href="#">Apply for Agency</a></li>
+					<li><a href="#">Rules</a></li>
+					<li><a href="#">Policy for Agent</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr />
+		<div class="text-center copyright">
+			&copy; 2016 Ashwinradadiya.com. All rights reserved.
+		</div>
+	</div>
+</footer>
+
+<!-- Java Script -->
+<script type="text/javascript" src="assets/plugins/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<!-- Plugins that will be loaded with CSS -->
+<link rel="stylesheet" href="assets/plugins/font-awesome-4.5.0/css/font-awesome.min.css" />
+
+<script type="text/javascript" src="assets/plugins/ajax-library/jquery.ajaxlibs.js"></script>
+
+<script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/plugins-edited/select2/select2.css" />
+
+<script type="text/javascript" src="assets/plugins/icheck-1.x/icheck.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/plugins-edited/icheck-1.x/skins/square/theme.css" />
+
+<!-- End Plugins that will be loaded with CSS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

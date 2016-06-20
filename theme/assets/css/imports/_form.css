@@ -1,0 +1,43 @@
+.form-control {
+    background-color: #f0f0f0;
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #cacbd0;
+    height: 40px;
+    border-width: 2px;
+}
+.form-control:focus {
+	border-color: #373f51;
+  	outline: 0;
+  	box-shadow: none;
+}
+
+label {
+    color: #373f51;
+}
+label>small {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.iCheck label {
+    vertical-align: top;
+    padding-left: 5px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.iCheck.i-middle {
+    height: 32px;
+    padding-top: 5px;
+}
+
+
+.form-footer {
+	margin-top: 30px;
+}
+
+form button[type=submit], form input[type=submit] {
+	font-size: 15px;
+	padding: 9px 80px;
+}

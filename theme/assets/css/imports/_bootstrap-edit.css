@@ -1,0 +1,11 @@
+html, body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+.btn {
+	border-radius: 0;
+}
+.btn-danger {
+	background-color: #ff5358;
+}

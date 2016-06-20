@@ -1,0 +1,11 @@
+.row.small-spacing .col-xs-1, .row.small-spacing .col-xs-10, .row.small-spacing .col-xs-11, .row.small-spacing .col-xs-12, .row.small-spacing .col-xs-2, .row.small-spacing .col-xs-3, .row.small-spacing .col-xs-4, .row.small-spacing .col-xs-5, .row.small-spacing .col-xs-6, .row.small-spacing .col-xs-7, .row.small-spacing .col-xs-8, .row.small-spacing .col-xs-9 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.row.small-spacing:first-child {
+    margin-left: -5px;
+}
+.row.small-spacing:last-child {
+    margin-right: -5px;
+}

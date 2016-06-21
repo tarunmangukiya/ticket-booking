@@ -1,0 +1,167 @@
+.results-page {
+    background-color: #e0e0e0;
+}
+
+.search-results {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.search-info {
+    background-color: #FFF;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    margin-bottom: 15px;
+}
+
+.flight-details-small abbr {
+    font-size: 20px;
+}
+
+.flight-details-small location {
+    font-size: 11px;
+    color: #91959e;
+    display: block;
+}
+
+.flight-details-small .flight-dir {
+    position: relative;
+    text-align: center;
+    color: #91959e;
+}
+.flight-details-small .flight-dir span {
+    font-size: 12px;
+    display: inline-block;
+    top: -4px;
+    position: relative;
+}
+.flight-details-small .flight-dir .divider {
+    margin: 5px 0;
+}
+.flight-details-small .flight-dir .fa {
+    position: relative;
+    top: -15px;
+}
+
+.search-info .title {
+    font-size: 13px;
+    color: #91959e;
+    margin-top: 4px;
+}
+.search-info .data {
+    font-size: 15px;
+}
+
+.flight-rates {
+    width: 100px;
+}
+.flight-rates img {
+    float: left;
+    margin: 23px 5px 0 0;
+}
+.flight-rates .flight-name {
+    font-size: 13px;
+}
+.flight-rates .rates {
+    font-size: 16px;
+}
+.flight-rates .stops {
+    font-size: 13px;
+    color: #91959e;
+}
+
+.flights-list .types {
+    margin-left: 70px;
+    background-color: #FFF;
+    padding: 8px 15px 5px;
+    margin-right: 70px;
+}
+.flights-list .types ul {
+    margin-bottom: 0;
+}
+.flights-list .types ul>li>a {
+    background-color: #e6e6e6;
+    border: 0;
+    color: #373f51;
+}
+.flights-list .types ul>li.active>a {
+    background-color: #ffe66d;
+}
+
+.flights-filter {
+    margin-top: 10px;
+}
+.flights-filter .flights-filter-tag {
+    background-color: #ffe66d;
+    width: 60px;
+    text-align: center;
+    padding: 8px;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+}
+.flights-filter .filters {
+    margin-left: 54px;
+}
+.flights-filter .filters .btn-default {
+    border: 0;
+    padding: 9px 25px 9px 6px;
+}
+.flights-filter .filters .btn-default .caret {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+
+.flights-filter .dropdown-menu {
+    border: 0;
+    background-color: #FFF;
+}
+
+.flights-filter .dropdown.open>a, .flights-filter .dropdown>a:hover, .flights-filter .dropdown>a:focus {
+    border-bottom: 4px solid #ffe66d !important;
+    background-color: #FFF !important;
+    margin-bottom: -4px;
+}
+
+.timings-filter .title {
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.timings-filter ul {
+    width: 308px;
+    text-align: center;
+}
+
+.timings-filter ul>li {
+    width: 25%;
+    display: inline-block;
+    padding: 0;
+    float: left;
+}
+
+.timings-filter ul>li>a {
+    color: #373f51;
+    border-bottom: 4px solid #999999;
+    display: block;
+    padding: 4px 0;
+    text-decoration: none;
+}
+.timings-filter ul>li.active>a {
+    border-color: #ffe66d;
+}
+
+.timings-filter ul>li i {
+    font-size: 30px;
+    display: block;
+    height: 20px;
+}
+
+.timings-filter ul>li span {
+    font-size: 11px;
+}
+
+.timings-filter .dropdown-menu {
+    padding: 0 10px 10px;
+}

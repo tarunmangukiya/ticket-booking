@@ -3,6 +3,11 @@
 	background-repeat: no-repeat;
 }
 
+.ti.center{
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
 .ti-flight-up {
 	background-image: url(../../images/icons/flight-up.png);
 }
@@ -13,4 +18,17 @@
 
 .ti-cal {
 	background-image: url(../../images/icons/cal.png);
+}
+
+.ti-morning {
+	background-image: url(../../images/icons/morning.png);
+}
+.ti-sun {
+	background-image: url(../../images/icons/sun.png);
+}
+.ti-sunset {
+	background-image: url(../../images/icons/sunset.png);
+}
+.ti-moon {
+	background-image: url(../../images/icons/moon.png);
 }

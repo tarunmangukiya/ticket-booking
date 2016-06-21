@@ -1,6 +1,7 @@
 html, body {
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
+    color: #373f51;
 }
 
 .btn {
@@ -8,4 +9,42 @@ html, body {
 }
 .btn-danger {
 	background-color: #ff5358;
+}
+
+.caret {
+    border-color: #888 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+}
+
+.dropdown-menu {
+    list-style-type: none;
+    background-color: #f9f9f9;
+    border-left: 2px solid #cacbd0;
+    z-index: 1051;
+    padding: 6px 0;
+    /* display: block; */
+    border-radius: 0;
+    border-right: 2px solid #cacbd0;
+    border-bottom: 2px solid #cacbd0;
+    border-top: 0;
+    margin-top: 0px;
+    box-shadow: none;
+}
+
+.dropdown-menu>li>a {
+    padding: 0;
+    background-color: #f9f9f9;
+    padding: 4px 12px;
+    color: #373f51;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background-color: #26aebd;
+    color: #FFF;
+}
+
+.dropdown.open .caret {
+	border-color: transparent transparent #888 transparent;
+    border-width: 0 4px 5px 4px;
 }

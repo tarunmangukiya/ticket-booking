@@ -17,7 +17,7 @@
     border: 0;
 }
 .ticket-tabs .nav-tabs>li>a {
-    background-color: #373f52cb;
+    background-color: rgba(55, 63, 82, 0.8);
     color: #FFF;
     border-radius: 0;
     border: 0;

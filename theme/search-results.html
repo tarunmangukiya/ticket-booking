@@ -11,7 +11,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/builds/style.css" />
 </head>
@@ -238,36 +238,1241 @@
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="dropdown">
-							<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-map-marker"></i> Stops <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-							</ul>
+						<div class="stops-filter">
+							<div class="dropdown">
+								<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-map-marker"></i> Stops <span class="caret"></span></a>
+								<div class="dropdown-menu">
+									<ul class="list-inline">
+										<li class="active"><a href="#">0 <span>Stops</span></a></li>
+										<li><a href="#">1 <span>Stops</span></a></li>
+										<li><a href="#">1+ <span>Stops</span></a></li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="dropdown">
-							<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-inr"></i> Price <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-							</ul>
+						<div class="price-filter">
+							<div class="dropdown">
+								<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-inr"></i> Price <span class="caret"></span></a>
+								<div class="dropdown-menu">
+									<div class="slider-container">
+										<input
+										    type="text"
+										    data-provide="slider"
+										    data-slider-min="31110"
+										    data-slider-max="514000"
+										    data-slider-step="5000"
+										    data-slider-value="414000"
+										>
+									<div class="min text-left"><span class="unit">₹</span> <span class="amount">31110</span></div>
+									<div class="max text-right"><span class="unit">₹</span> <span class="amount">514000</span></div>
+									<div class="clearfix"></div>
+									<div class="iCheck">
+										<input type="checkbox" name="type" id="refundable" />
+										<label for="refundable">Show only refundable fares.</label>
+									</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="dropdown">
-							<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-clock-o"></i> Time <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-								<li><a href="#"><i class="fa fa-plane"></i> Check Flight Status</a></li>
-							</ul>
+						<div class="airlines-filter">
+							<div class="dropdown">
+								<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plane"></i> Airlines <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">
+											<div class="iCheck">
+												<input type="checkbox" name="type" id="line1" />
+												<label for="line1">Line1</label>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="iCheck">
+												<input type="checkbox" name="type" id="line2" />
+												<label for="line2">Line2</label>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="iCheck">
+												<input type="checkbox" name="type" id="line3" />
+												<label for="line3">Line3</label>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="flights-filter-tag">
+				Sort
+			</div>
+			<div class="filters">
+				<div class="row small-spacing">
+					<div class="col-md-3">
+						<div class="sorting-filter">
+							<div class="dropdown">
+								<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departure <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Depart Early</a></li>
+									<li><a href="#">Depart Late</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="sorting-filter">
+							<div class="dropdown">
+								<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Arrival <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li class="active"><a href="#">Arrive Early</a></li>
+									<li><a href="#">Arrive Late</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="sorting-filter">
+							<div class="dropdown">
+								<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Duration <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Low to High</a></li>
+									<li><a href="#">High to Low</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="sorting-filter">
+							<div class="dropdown">
+								<a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Price <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Low to High</a></li>
+									<li><a href="#">High to Low</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="flights-results">
+		<div class="row flight-details">
+			<div class="col-sm-2 flight-basics">
+				<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+				<div class="flight-name">IndiGo</div>
+				<div class="flight-code">6E-843</div>
+			</div>
+			<div class="col-sm-7 main-part only-one-timing">
+				<div class="row small-spacing">
+					<div class="col-xs-2 from-ports from-timings">
+						<div class="date"><date>Mon 26 September, 2016</date></div>
+						<ul class="list-unstyled timings">
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1FromTest" class="minimal-green" />
+									<label for="time1FromTest"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From2" class="minimal-green" />
+									<label for="time1From2"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From3" class="minimal-green" />
+									<label for="time1From3"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From4" class="minimal-green" />
+									<label for="time1From4"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From5" class="minimal-green" />
+									<label for="time1From5"><time>10:12</time></label>
+								</div>
+							</li>
+						</ul>
+						<div class="btn-timing-option">
+							<a href="#" class="show-timings"><i class="fa fa-chevron-down"></i> <span class="number">0</span> More Timing Option(s)</a>
+							<a href="#" class="hide-timings"><i class="fa fa-chevron-up"></i> Less Timing Option(s)</a>
+						</div>
+					</div>
+					<div class="col-xs-2 from-ports text-right">
+						<div class="station-name">New Delhi <abbr>(DEL)</abbr></div>
+						<div class="terminal-name">Terminal 1B</div>
+					</div>
+					<div class="col-xs-3 flight-dir">
+						<div class="stops">Non stop</div>
+						<div class="divider"><span class="stops-count">2</span></div>
+						<ul class="list-unstyled flight-total-time timings">
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+						</ul>
+					</div>
+					<div class="col-xs-2 to-ports">
+						<div class="station-name">New Delhi <abbr>(DEL)</abbr></div>
+						<div class="terminal-name">Terminal 1B</div>
+					</div>
+					<div class="col-xs-2 to-ports to-timings">
+						<div class="date"><date>Mon 26 September, 2016</date></div>
+						<ul class="list-unstyled timings">
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-12 remarks">presagient dyslogy unuprightly circumviate.</div>
+				</div>
+			</div>
+			<div class="col-sm-3 booking-info">
+				<div class="row">
+					<div class="col-xs-6 text-right">
+						<div class="label label-primary">Refundable</div>
+						<div class="rates"><span class="unit">₹</span> <span class="amount">15,000</span></div>
+					</div>
+					<div class="col-xs-6">
+						<a href="#" class="btn btn-primary btn-block">Book</a>
+						<a href="#" class="btn btn-primary-invert btn-block btn-flight-detail">Flight Detail</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div class="col-sm-2 flight-basics multiple-airlines">
+				<div class="multiple-title">
+					<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+					<b>Multiple Airlines</b>
+				</div>
+				<div class="airline">
+					<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+					<div class="flight-name">Eithad Airways, American Airways</div>
+				</div>
+			</div>
+			<div class="col-sm-7 main-part only-one-timing">
+				<div class="row small-spacing">
+					<div class="col-xs-2 from-ports from-timings">
+						<div class="date"><date>Mon 26 September, 2016</date></div>
+						<ul class="list-unstyled timings">
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From" class="minimal-green" />
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From" class="minimal-green" />
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From" class="minimal-green" />
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+						</ul>
+						<div class="btn-timing-option">
+							<a href="#" class="show-timings"><i class="fa fa-chevron-down"></i> <span class="number">0</span> More Timing Option(s)</a>
+							<a href="#" class="hide-timings"><i class="fa fa-chevron-up"></i> Less Timing Option(s)</a>
+						</div>
+					</div>
+					<div class="col-xs-2 from-ports text-right">
+						<div class="station-name">New Delhi <abbr>(DEL)</abbr></div>
+						<div class="terminal-name">Terminal 1B</div>
+					</div>
+					<div class="col-xs-3 flight-dir">
+						<div class="stops">Non stop</div>
+						<div class="divider"><span class="stops-count">2</span></div>
+						<ul class="list-unstyled flight-total-time timings">
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+						</ul>
+					</div>
+					<div class="col-xs-2 to-ports">
+						<div class="station-name">New Delhi <abbr>(DEL)</abbr></div>
+						<div class="terminal-name">Terminal 1B</div>
+					</div>
+					<div class="col-xs-2 to-ports to-timings">
+						<div class="date"><date>Mon 26 September, 2016</date></div>
+						<ul class="list-unstyled timings">
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-12 remarks">presagient dyslogy unuprightly circumviate.</div>
+				</div>
+			</div>
+			<div class="col-sm-3 booking-info">
+				<div class="row">
+					<div class="col-xs-6 text-right">
+						<div class="label label-primary">Refundable</div>
+						<div class="rates">
+							<strike><span class="unit">₹</span> <span class="amount">15,000</span></strike>
+							<span class="unit">₹</span> <span class="amount">15,000</span>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<a href="#" class="btn btn-primary btn-block">Book</a>
+						<a href="#" class="btn btn-primary-invert btn-block btn-flight-detail">Flight Detail</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+			<div class="col-md-12 flight-detailed-info hidden">
+				<ul class="nav nav-tabs nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#itinerary" data-toggle="tab">Itinerary</a></li>
+					<li role="presentation"><a href="#fareDetails" data-toggle="tab">Fare Detail</a></li>
+					<li role="presentation"><a href="#baggage" data-toggle="tab">Baggage</a></li>
+					<li role="presentation"><a href="#aminities" data-toggle="tab">Aminities</a></li>
+					<li class="btn-flight-details-close"><a href="#"><i class="fa fa-close"></i></a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="itinerary">
+						<div class="title">
+							<h3>Book Domestic &amp; International Flight Ticket</h3>
+						</div>
+						<div class="clearfix"></div>
+						<div class="row">	
+							<div class="col-sm-3 flight-basics">
+								<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+								<div class="flight-name">IndiGo</div>
+								<div class="flight-code">6E-843</div>
+								<div class="flight-operated-by">Operated by Ethihad Airways</div>
+							</div>
+							<div class="col-sm-9 main-part">
+								<div class="row small-spacing">
+									<div class="col-xs-2 from-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+									<div class="col-xs-2 from-ports text-right">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-3 flight-dir">
+										<div class="divider-2"></div>
+										<div class="flight-total-time timings">22h 35m</div>
+									</div>
+									<div class="col-xs-2 to-ports">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-2 to-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flight-change-banner">
+							<div class="inner">
+								<div class="row small-spacing">
+									<div class="col-xs-6">
+										Changes of Planes at Abu Dhabhi
+									</div>
+									<div class="col-xs-3 text-right">
+										Layover Time
+									</div>
+									<div class="col-xs-3 text-left">
+										<span class="clr-red">03h 00m</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">	
+							<div class="col-sm-3 flight-basics">
+								<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+								<div class="flight-name">IndiGo</div>
+								<div class="flight-code">6E-843</div>
+								<div class="flight-operated-by">Operated by Ethihad Airways</div>
+							</div>
+							<div class="col-sm-9 main-part">
+								<div class="row small-spacing">
+									<div class="col-xs-2 from-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+									<div class="col-xs-2 from-ports text-right">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-3 flight-dir">
+										<div class="divider-2"></div>
+										<div class="flight-total-time timings">22h 35m</div>
+									</div>
+									<div class="col-xs-2 to-ports">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-2 to-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flight-change-banner">
+							<div class="inner">
+								<div class="row small-spacing">
+									<div class="col-xs-6">
+										Changes of Planes at Abu Dhabhi
+									</div>
+									<div class="col-xs-3 text-right">
+										Layover Time
+									</div>
+									<div class="col-xs-3 text-left">
+										<span class="clr-red">03h 00m</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">	
+							<div class="col-sm-3 flight-basics">
+								<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+								<div class="flight-name">IndiGo</div>
+								<div class="flight-code">6E-843</div>
+								<div class="flight-operated-by">Operated by Ethihad Airways</div>
+							</div>
+							<div class="col-sm-9 main-part">
+								<div class="row small-spacing">
+									<div class="col-xs-2 from-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+									<div class="col-xs-2 from-ports text-right">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-3 flight-dir">
+										<div class="divider-2"></div>
+										<div class="flight-total-time timings">22h 35m</div>
+									</div>
+									<div class="col-xs-2 to-ports">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-2 to-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fare-details" id="fareDetails">
+						<div class="title">
+							<div class="row">
+								<div class="col-sm-3">
+									<h3>Fare Detail</h3>
+								</div>
+								<div class="col-sm-9">
+									<h3>Fare Rules</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="row inner-row">
+							<div class="col-sm-3">
+								<div class="table-responsive table-fares">
+									<table class="table table-unstyled">
+										<thead>
+											<tr>
+												<th colspan="2">Base Fare</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2 Adult (2 x 15,000)</td>
+												<td class="text-right">₹ 30,000</td>
+											</tr>
+											<tr>
+												<td>2 Adult (2 x 15,000)</td>
+												<td class="text-right">₹ 30,000</td>
+											</tr>
+											<tr>
+												<td colspan="2"><hr /></td>
+											</tr>
+										</tbody>
+										<thead>
+											<tr>
+												<th colspan="2">Base Fare</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2 Adult (2 x 15,000)</td>
+												<td class="text-right">₹ 30,000</td>
+											</tr>
+											<tr>
+												<td>2 Adult (2 x 15,000)</td>
+												<td class="text-right">₹ 30,000</td>
+											</tr>
+											<tr>
+												<td colspan="2"><hr /></td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr class="total">
+												<td>Total</td>
+												<td class="amount clr-red text-right">₹ 30,000</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<h4>Cancellation Fee (per passenger)</h4>
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="15%">Segment</th>
+												<th width="70%">Airline Fee</th>
+												<th width="15%">Website Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>ani forfoughen labiopharyngeal gonomere cephaloid metrical wauken Grumium overprovident trichomycosis disruption uranophotography</td>
+												<td>DEL - JFK</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>gametophyte heatlike lymphangial sausagelike bronchophony unapplicableness nonagesimal subalkaline wordmonger Gecarcin</td>
+												<td>DEL - JFK</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<p class="rules-info">* sequence bristletail pregeniculum mizzen sorbitol leecher crumblet praediality aube uncharte</p>
+
+								<h4>Date Change Fee (per passenger)</h4>
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="15%">Segment</th>
+												<th width="70%">Airline Fee</th>
+												<th width="15%">Website Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>ani forfoughen labiopharyngeal gonomere cephaloid metrical wauken Grumium overprovident trichomycosis disruption uranophotography</td>
+												<td>DEL - JFK</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<p class="rules-info">* sequence bristletail pregeniculum mizzen sorbitol leecher crumblet praediality aube uncharte</p>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane baggage" id="baggage">
+						<div class="title">
+							<div class="row">
+								<div class="col-sm-6">
+									<h3>Check-In Baggage</h3>
+								</div>
+								<div class="col-sm-6">
+									<h3>Cabin Baggage</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="row inner-row">
+							<div class="col-sm-6">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="50%">Segment</th>
+												<th width="50%">Airline Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>2 Pc.</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>2 Pc.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="50%">Segment</th>
+												<th width="50%">Airline Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>2 Pc.</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>2 Pc.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<p class="rules-info">* trihemimeris dispondaic bride Megarhinus forgiveness irresuscitably phyllomorphic deaquation integriously pneumoencephalitis tercel amasty Anatifae checkroom attercop justifiableness pentastich Shape adenostemonous wistonwish paternalism robalo anthranil pohickorysequence bristletail pregeniculum mizzen sorbitol leecher crumblet praediality aube uncharte</p>
+							</div>
+							
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane aminities" id="aminities">
+						<div class="title">
+							<h3>Details</h3>
+						</div>
+
+						<div class="row inner-row">
+							<div class="col-md-12">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="15%">Segment</th>
+												<th width="40%">Airline Fee</th>
+												<th width="15%">Website Fee</th>
+												<th width="15%">Website Fee</th>
+												<th width="15%">Website Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>thurse nontransportation sarcle truistical economization neurohypnotic oxyacanthous septendecimal arctoid</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>thurse nontransportation sarcle truistical economization neurohypnotic oxyacanthous septendecimal arctoid</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>thurse nontransportation sarcle truistical economization neurohypnotic oxyacanthous septendecimal arctoid</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<p class="rules-info">* trihemimeris dispondaic bride Megarhinus forgiveness irresuscitably phyllomorphic deaquation integriously pneumoencephalitis tercel amasty Anatifae checkroom attercop justifiableness pentastich Shape adenostemonous wistonwish paternalism robalo anthranil pohickorysequence bristletail pregeniculum mizzen sorbitol leecher crumblet praediality aube uncharte</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row flight-details">
+			<div class="col-sm-2 flight-basics">
+				<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+				<div class="flight-name">IndiGo</div>
+				<div class="flight-code">6E-843</div>
+			</div>
+			<div class="col-sm-7 main-part only-one-timing">
+				<div class="row small-spacing">
+					<div class="col-xs-2 from-ports from-timings">
+						<div class="date"><date>Mon 26 September, 2016</date></div>
+						<ul class="list-unstyled timings">
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From" class="minimal-green" />
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From" class="minimal-green" />
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From" class="minimal-green" />
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From" class="minimal-green" />
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<input type="radio" name="flights1Timings" id="time1From" class="minimal-green" />
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+						</ul>
+						<div class="btn-timing-option">
+							<a href="#" class="show-timings"><i class="fa fa-chevron-down"></i> <span class="number">0</span> More Timing Option(s)</a>
+							<a href="#" class="hide-timings"><i class="fa fa-chevron-up"></i> Less Timing Option(s)</a>
+						</div>
+					</div>
+					<div class="col-xs-2 from-ports text-right">
+						<div class="station-name">New Delhi <abbr>(DEL)</abbr></div>
+						<div class="terminal-name">Terminal 1B</div>
+					</div>
+					<div class="col-xs-3 flight-dir">
+						<div class="stops">Non stop</div>
+						<div class="divider"><span class="stops-count">2</span></div>
+						<ul class="list-unstyled flight-total-time timings">
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+							<li>22h 35m</li>
+						</ul>
+					</div>
+					<div class="col-xs-2 to-ports">
+						<div class="station-name">New Delhi <abbr>(DEL)</abbr></div>
+						<div class="terminal-name">Terminal 1B</div>
+					</div>
+					<div class="col-xs-2 to-ports to-timings">
+						<div class="date"><date>Mon 26 September, 2016</date></div>
+						<ul class="list-unstyled timings">
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+							<li>
+								<div class="iCheck">
+									<label for="time1From"><time>10:12</time></label>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-12 remarks">presagient dyslogy unuprightly circumviate.</div>
+				</div>
+			</div>
+			<div class="col-sm-3 booking-info">
+				<div class="row">
+					<div class="col-xs-6 text-right">
+						<div class="label label-primary">Refundable</div>
+						<div class="rates"><span class="unit">₹</span> <span class="amount">15,000</span></div>
+					</div>
+					<div class="col-xs-6">
+						<a href="#" class="btn btn-primary btn-block">Book</a>
+						<a href="#" class="btn btn-primary-invert btn-block btn-flight-detail">Flight Detail</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+			<div class="col-md-12 flight-detailed-info hidden">
+				<ul class="nav nav-tabs nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#itinerary" data-toggle="tab">Itinerary</a></li>
+					<li role="presentation"><a href="#fareDetails" data-toggle="tab">Fare Detail</a></li>
+					<li role="presentation"><a href="#baggage" data-toggle="tab">Baggage</a></li>
+					<li role="presentation"><a href="#aminities" data-toggle="tab">Aminities</a></li>
+					<li class="btn-flight-details-close"><a href="#"><i class="fa fa-close"></i></a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="itinerary">
+						<div class="title">
+							<h3>Book Domestic &amp; International Flight Ticket</h3>
+						</div>
+						<div class="clearfix"></div>
+						<div class="row">	
+							<div class="col-sm-3 flight-basics">
+								<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+								<div class="flight-name">IndiGo</div>
+								<div class="flight-code">6E-843</div>
+								<div class="flight-operated-by">Operated by Ethihad Airways</div>
+							</div>
+							<div class="col-sm-9 main-part">
+								<div class="row small-spacing">
+									<div class="col-xs-2 from-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+									<div class="col-xs-2 from-ports text-right">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-3 flight-dir">
+										<div class="divider-2"></div>
+										<div class="flight-total-time timings">22h 35m</div>
+									</div>
+									<div class="col-xs-2 to-ports">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-2 to-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flight-change-banner">
+							<div class="inner">
+								<div class="row small-spacing">
+									<div class="col-xs-6">
+										Changes of Planes at Abu Dhabhi
+									</div>
+									<div class="col-xs-3 text-right">
+										Layover Time
+									</div>
+									<div class="col-xs-3 text-left">
+										<span class="clr-red">03h 00m</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">	
+							<div class="col-sm-3 flight-basics">
+								<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+								<div class="flight-name">IndiGo</div>
+								<div class="flight-code">6E-843</div>
+								<div class="flight-operated-by">Operated by Ethihad Airways</div>
+							</div>
+							<div class="col-sm-9 main-part">
+								<div class="row small-spacing">
+									<div class="col-xs-2 from-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+									<div class="col-xs-2 from-ports text-right">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-3 flight-dir">
+										<div class="divider-2"></div>
+										<div class="flight-total-time timings">22h 35m</div>
+									</div>
+									<div class="col-xs-2 to-ports">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-2 to-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flight-change-banner">
+							<div class="inner">
+								<div class="row small-spacing">
+									<div class="col-xs-6">
+										Changes of Planes at Abu Dhabhi
+									</div>
+									<div class="col-xs-3 text-right">
+										Layover Time
+									</div>
+									<div class="col-xs-3 text-left">
+										<span class="clr-red">03h 00m</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">	
+							<div class="col-sm-3 flight-basics">
+								<img src="assets/images/icons/flight-default.png" class="logo img-responsive" alt="" />
+								<div class="flight-name">IndiGo</div>
+								<div class="flight-code">6E-843</div>
+								<div class="flight-operated-by">Operated by Ethihad Airways</div>
+							</div>
+							<div class="col-sm-9 main-part">
+								<div class="row small-spacing">
+									<div class="col-xs-2 from-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+									<div class="col-xs-2 from-ports text-right">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-3 flight-dir">
+										<div class="divider-2"></div>
+										<div class="flight-total-time timings">22h 35m</div>
+									</div>
+									<div class="col-xs-2 to-ports">
+										<div class="station-name"><abbr class="big">DEL</abbr> <span class="terminal-name">Terminal 1B</span></div>
+										<div class="airport-name">Indira Gandhi Intl. Airport</div>
+									</div>
+									<div class="col-xs-2 to-ports text-center">
+										<div class="date"><date>Mon 26 September, 2016</date></div>
+										<ul class="list-unstyled timings">
+											<li>
+												<label for="time1From"><time>10:12</time></label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fare-details" id="fareDetails">
+						<div class="title">
+							<div class="row">
+								<div class="col-sm-3">
+									<h3>Fare Detail</h3>
+								</div>
+								<div class="col-sm-9">
+									<h3>Fare Rules</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="row inner-row">
+							<div class="col-sm-3">
+								<div class="table-responsive table-fares">
+									<table class="table table-unstyled">
+										<thead>
+											<tr>
+												<th colspan="2">Base Fare</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2 Adult (2 x 15,000)</td>
+												<td class="text-right">₹ 30,000</td>
+											</tr>
+											<tr>
+												<td>2 Adult (2 x 15,000)</td>
+												<td class="text-right">₹ 30,000</td>
+											</tr>
+											<tr>
+												<td colspan="2"><hr /></td>
+											</tr>
+										</tbody>
+										<thead>
+											<tr>
+												<th colspan="2">Base Fare</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2 Adult (2 x 15,000)</td>
+												<td class="text-right">₹ 30,000</td>
+											</tr>
+											<tr>
+												<td>2 Adult (2 x 15,000)</td>
+												<td class="text-right">₹ 30,000</td>
+											</tr>
+											<tr>
+												<td colspan="2"><hr /></td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr class="total">
+												<td>Total</td>
+												<td class="amount clr-red text-right">₹ 30,000</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<h4>Cancellation Fee (per passenger)</h4>
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="15%">Segment</th>
+												<th width="70%">Airline Fee</th>
+												<th width="15%">Website Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>ani forfoughen labiopharyngeal gonomere cephaloid metrical wauken Grumium overprovident trichomycosis disruption uranophotography</td>
+												<td>DEL - JFK</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>gametophyte heatlike lymphangial sausagelike bronchophony unapplicableness nonagesimal subalkaline wordmonger Gecarcin</td>
+												<td>DEL - JFK</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<p class="rules-info">* sequence bristletail pregeniculum mizzen sorbitol leecher crumblet praediality aube uncharte</p>
+
+								<h4>Date Change Fee (per passenger)</h4>
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="15%">Segment</th>
+												<th width="70%">Airline Fee</th>
+												<th width="15%">Website Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>ani forfoughen labiopharyngeal gonomere cephaloid metrical wauken Grumium overprovident trichomycosis disruption uranophotography</td>
+												<td>DEL - JFK</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<p class="rules-info">* sequence bristletail pregeniculum mizzen sorbitol leecher crumblet praediality aube uncharte</p>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane baggage" id="baggage">
+						<div class="title">
+							<div class="row">
+								<div class="col-sm-6">
+									<h3>Check-In Baggage</h3>
+								</div>
+								<div class="col-sm-6">
+									<h3>Cabin Baggage</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="row inner-row">
+							<div class="col-sm-6">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="50%">Segment</th>
+												<th width="50%">Airline Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>2 Pc.</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>2 Pc.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="50%">Segment</th>
+												<th width="50%">Airline Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>2 Pc.</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>2 Pc.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<p class="rules-info">* trihemimeris dispondaic bride Megarhinus forgiveness irresuscitably phyllomorphic deaquation integriously pneumoencephalitis tercel amasty Anatifae checkroom attercop justifiableness pentastich Shape adenostemonous wistonwish paternalism robalo anthranil pohickorysequence bristletail pregeniculum mizzen sorbitol leecher crumblet praediality aube uncharte</p>
+							</div>
+							
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane aminities" id="aminities">
+						<div class="title">
+							<h3>Details</h3>
+						</div>
+
+						<div class="row inner-row">
+							<div class="col-md-12">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th width="15%">Segment</th>
+												<th width="40%">Airline Fee</th>
+												<th width="15%">Website Fee</th>
+												<th width="15%">Website Fee</th>
+												<th width="15%">Website Fee</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>thurse nontransportation sarcle truistical economization neurohypnotic oxyacanthous septendecimal arctoid</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>thurse nontransportation sarcle truistical economization neurohypnotic oxyacanthous septendecimal arctoid</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+											</tr>
+											<tr>
+												<td>DEL - JFK</td>
+												<td>thurse nontransportation sarcle truistical economization neurohypnotic oxyacanthous septendecimal arctoid</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+												<td>₹ 200</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<p class="rules-info">* trihemimeris dispondaic bride Megarhinus forgiveness irresuscitably phyllomorphic deaquation integriously pneumoencephalitis tercel amasty Anatifae checkroom attercop justifiableness pentastich Shape adenostemonous wistonwish paternalism robalo anthranil pohickorysequence bristletail pregeniculum mizzen sorbitol leecher crumblet praediality aube uncharte</p>
+							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -468,66 +1673,6 @@
 					<span class="text">FAQs</span>
 				</a>
 			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
-			<div class="col-md-2 col-sm-4">
-				<a href="#" class="service">
-					<span class="icon"><i class="fa fa-comments-o"></i></span>
-					<span class="text">FAQs</span>
-				</a>
-			</div>
 		</div>
 	</div>
 </div>
@@ -592,9 +1737,13 @@
 
 <script type="text/javascript" src="assets/plugins/icheck-1.x/icheck.min.js"></script>
 <link rel="stylesheet" type="text/css" href="assets/plugins-edited/icheck-1.x/skins/square/theme.css" />
+<link rel="stylesheet" type="text/css" href="assets/plugins-edited/icheck-1.x/skins/minimal/green.css" />
 
 <script type="text/javascript" src="assets/plugins/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
 <link rel="stylesheet" type="text/css" href="assets/plugins-edited/bootstrap-multiselect/dist/css/bootstrap-multiselect.css" />
+
+<script type="text/javascript" src="assets/plugins/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/plugins-edited/bootstrap-slider/dist/css/bootstrap-slider.css" />
 
 <script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
 <link rel="stylesheet" type="text/css" href="assets/plugins-edited/owl-carousel/owl-carousel/owl.carousel-edited.css" />

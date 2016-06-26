@@ -1,3 +1,7 @@
+.multiselect-div {
+    position: relative;
+}
+
 .multiselect-div.open .multiselect-button:focus {
 	border-color: #373f51;
 }

@@ -5,11 +5,29 @@ html, body {
 }
 
 .btn {
-	border-radius: 0;
+    border-radius: 0;
+    border:0;
 }
 .btn-danger {
-	background-color: #ff5358;
+    background-color: #ff5358;
 }
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #26aebd;
+}
+.btn-primary-invert, .btn-primary-invert:hover, .btn-primary-invert:focus, .btn-primary-invert:active {
+    background-color: #ffffff;
+    color: #26aebd;
+    border: 2px solid;
+}
+
+.label {
+    border-radius: 0;
+    padding: 3px 6px;
+}
+.label-primary {
+    background-color: #26aebd;
+}
+
 
 .caret {
     border-color: #888 transparent transparent transparent;
@@ -45,6 +63,14 @@ html, body {
 }
 
 .dropdown.open .caret {
-	border-color: transparent transparent #888 transparent;
+    border-color: transparent transparent #888 transparent;
     border-width: 0 4px 5px 4px;
+}
+
+
+.table.table-unstyled>tbody>tr>td, .table.table-unstyled>tbody>tr>th, .table.table-unstyled>tfoot>tr>td, .table.table-unstyled>tfoot>tr>th, .table.table-unstyled>thead>tr>td, .table.table-unstyled>thead>tr>th {
+    border: 0;
+}
+.table hr {
+    margin: 0
 }

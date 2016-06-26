@@ -15,6 +15,10 @@
 	background-color: #FFF;
 }
 
+.clr-red {
+	color: #ff5358;
+}
+
 .dotted-line {
 	display: block;
 	min-height: 2px;

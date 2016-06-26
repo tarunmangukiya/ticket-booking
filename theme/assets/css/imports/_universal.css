@@ -34,12 +34,12 @@
     color: #FFF;
 }
 
-.dropdown-menu>li>a {
+.navbar-default .dropdown-menu>li>a {
     background-color: #26aebd;
     color: #FFF;
     padding: 5px 15px;
 }
-.dropdown-menu>li>a>.fa {
+.navbar-default .dropdown-menu>li>a>.fa {
     margin-right: 5px;
 }
 

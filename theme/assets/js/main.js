@@ -85,6 +85,11 @@ $(function () {
 			radioClass: 'iradio_square-theme',
 			cursor: false
 		});
+		$('input.minimal-green').iCheck({
+			checkboxClass: 'icheckbox_minimal-green',
+			radioClass: 'iradio_minimal-green',
+			cursor: false
+		});
 	};
 
 	set_multiselect = function () {
@@ -112,5 +117,47 @@ $(function () {
 		set_datepicker();
 	}
 
+	/* Extra Javascripts for custom codes */
+	$('.price-filter>.dropdown').on('shown.bs.dropdown', function (e) {
+		$(this).find('[data-provide=slider]').slider('relayout');
+	});
 
+	set_timings = function () {
+		
+		$('.btn-timing-option>.hide-timings').on('click', function (e) {
+			$(this).parents('.main-part').addClass('only-one-timing');
+			return false;
+		});
+
+		$('.btn-timing-option>.show-timings').on('click', function (e) {
+			$(this).parents('.main-part').removeClass('only-one-timing');
+			return false;
+		});
+
+		$('.flight-details .main-part').each(function (i, e) {
+			var that = $(this);
+			var total = that.find('.from-timings .timings>li').length;
+			
+			if(total > 1) {
+				that.find('.btn-timing-option>.show-timings>.number').text(total-1);
+				that.find('.btn-timing-option>.hide-timings').click();
+			}
+			else {
+				that.find('.btn-timing-option').hide();	
+			}
+		});	
+	};
+
+	set_timings();
+
+	$('.btn-flight-detail').on('click', function (e) {
+		$(this).parents('.flight-details').find('.flight-detailed-info').toggleClass('hidden');
+		return false;
+	});
+	$('.btn-flight-details-close').on('click', function (e) {
+		if($(this).parents('.flight-details').find('.flight-detailed-info').hasClass('hidden') === false) {
+			$(this).parents('.flight-details').find('.flight-detailed-info').addClass('hidden');
+		}
+		return false;
+	});
 });
